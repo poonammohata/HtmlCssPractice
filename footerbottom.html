@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Responsive Website</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" type="image/jpg" href="images/about-me.jpg">
+</head>
+<body>
+	<header>
+	<a class="header-logo" href="#">poonam</a>
+	<nav>
+		<ul>
+			<li><a href="about.html">About</a></li>
+			<li><a href="portfolio.html">Portfolio</a></li>
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+		<a class="header-cases" href="cases.html">Cases</a>
+	</nav>	
+	</header>
+	<div class="container">
+		<div id="main">
+			<div id="map">
+			
+			</div>
+		</div>
+	</div>
+	<footer>
+		<ul class="main-list">
+			<li><a href="">Home</a></li>
+			<li><a href="caess.html">Cases</a></li>
+			<li><a href="">Portfolio</a></li>
+			<li><a href="">About Me</a></li>
+			<li><a href="">Contact</a></li>
+		</ul>
+		<ul class="second-list">
+			<li><p>Latest Cases</p></li>
+			<li><a href="">Mailing Shaloin-web development</a></li>
+			<li><a href="">excelento-web development,seo</a></li>
+			<li><a href="">mmtuts-youtube channnel</a></li>
+			<li><a href="">veltec-video production</a></li>
+		</ul>
+		<div class="footer-img">
+			<a href="#" class="fa fa-facebook"></a>
+			<a href="#" class="fa fa-twitter"></a>
+			<a href="#" class="fa fa-linkedin"></a>
+		</div>
+	</footer>
+	<script type="text/javascript">
+		function initMap() {
+			// body...
+			var location={lat:-25.363,lng:131.044};
+			var map=new google.maps.Map(document.getElementById('map'),{
+				zoom:4,
+				center:location
+			});
+		}
+	</script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
+	
+	<style type="text/css">
+		html,body{
+			height: 100%;
+		}
+		.container{
+			min-height: 100%;
+			background-color:red;
+
+		}
+		#main{
+			overflow: auto;
+			padding-bottom: 100px;
+		}
+		#map{
+			width: 100%;
+			height: 500px;
+		}
+		footer{
+			position: relative;
+			height: 100px;
+			margin-top: -100px;
+			clear: both;
+		}
+		
+	</style>
+</body>
+</html>

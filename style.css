@@ -1,60 +1,688 @@
-*{
-    margin: 0;
-    padding: 0;
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
 }
 
-.wrapper{
-    width: 100%
+body {
+    line-height:1;
 }
-.banner{
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    /*--border-collapse:collapse;
+    border-spacing:0;--*/
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;  
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+*{
+    text-decoration: none;
+}
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+body{
+    background-color:white;
+}
+header{
+    background-color: white;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+  
+}
+.header-logo{
+    display:block;
+    font-family: Catamaran;
+    font-size: 24px;
+    color: #111;
+    text-transform: uppercase;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+.header-cases{
     display: none;
 }
-article .info{
-    width: 100%;
-    padding: 10px;
+header nav ul{
+    margin: 0 auto;
+    width: fit-content;
 }
-h1{
-    padding: 2px 2px 2px 2px;
+header nav ul li{
+    list-style: none;
+    display: inline-block;
+    float: left;
+    padding:0 20px;
+}
+header nav ul li a{
     font-family: arial;
     font-size: 20px;
-    color: rgb(255,255,255);
-    line-height: 30px;
+    color: #111;
 }
-p{
-    padding: 2px 2px ;
+main{
+    padding-top: 100px;
+}
+.banner{
+    width:100%;
+    height:100vh;
+    background-image: url("./images/about-me.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+}
+.banner-text{
+    display: table-cell;
+    vertical-align: middle;
+
+}
+.banner-text h2{
+    font-family: Catamaran;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    text-shadow: 2px 2px 8px #111;
+    text-transform: uppercase;
+    
+}
+.banner-text h1{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: white;
+    font-style:italic;
+    font-weight: 100;
+    text-align: center;
+    line-height: 20px;
+    text-shadow: 2px 2px 8px #111;
+
+}
+.links div{
+    width: calc(100%-32px);
+    margin: 16px 16px 0;
+    height: 80px;
+    background-color: #f2f2f2;
+}
+.links div h3{
+    font-family: Catamaran;
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 80px;
+}
+footer{
+    width: 100%;
+    padding: 20px 30px;
+    background-color: #111;
+    margin-top: 20px;
+    overflow: hidden;
+}
+footer ul{
+ width:fit-content;
+ float: left;
+}
+footer ul li{
+    list-style: none;
+    display: block;
+}
+footer ul li a{
+    font-family: Catamaran;
+    font-size: 14px;
+    color: white;
     line-height: 20px;
 }
-.myimage{
-    width: 100%;
-    height: 300px;
-    margin-top: 20px;
+footer .second-list{
+    display: none;
 }
-@media only screen and (min-width:768px){
-    .banner{
-        display:block;
-        width: 100%;
-        padding-bottom: 20px;
-    }
-    .wrapper{
-        width: 80%;
-        margin: 0 auto;
-    }
+footer .footer-img{
+    width: 100px;
+    float: right;
+}
+footer .footer-img a{
+    display: block;
+}
+.fa{
+  margin: 10px 0;
+  font-size: 20px;
+  width: 25px;
+  text-align: center;
+  text-decoration: none;
+  color: #111;
+  border-radius: 50%;
+  background-color: white
+}
+@media only screen and (min-width: 768px){
+.banner{
+    width:100%;
+    height:100vh;
+    background-image: url("./images/about-me.jpg");
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: table;
+}
+.banner-text h2{
+    font-size: 35px; 
+}
+.banner-text h1{
+    line-height: 25px;
+}
+}
+@media only screen and (min-width: 1024px){
+header{
+    height: 80px;
+}
+.header-logo{
+    display:inline-block;
+    margin: 30px 10px;
+    padding: 10px 20px;
+    float: left;
+    border-right: 2px solid #111;
+}
+header nav ul{
+    float:left;
+    margin: 30px 10px;
+    padding: 10px 20px;
+}
+header nav ul li a{
+    text-transform: uppercase;
+}
+.header-cases{
+    display: inline-block;
+    float: right;
+    margin: 30px 20px;
+    padding: 10px 20px;
+    font-family: arial;
+    font-size: 18px;
+    color: #111;
+    text-transform: uppercase;
+    border:1px solid #111;
+}
+.banner{
+    height:80vh;
+    background-position: 50% 30%;
+}
+.banner-text h2{
+    line-height: 60px;
+    font-size: 60px;
+}
+.banner-text h1{
+    width:600px;
+    display:block;
+    margin: 0 auto;
+    font-size: 40px;
+    line-height: 50px;
+}
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.links div{
+    margin: 20px 10px 0 ;
+    height: 150px;
+    background-color: #f2f2f2;
+    float: left;
+}
+.square{
+      width: 230px;
+}
+.rectangle{
+    width: 480px;
+}
+.links div h3{
+    font-size: 22px;
+    line-height: 150px;
+}
+.links{
+    padding-bottom: 10px;
+    overflow: hidden;
+}
+footer .second-list{
+    display: block;
+    padding-left: 20px;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+footer ul li p{
+    font-family: Catamaran;
+    font-size: 14px;
+    color: white;
+}
+}
+.cases-links{
+    overflow: hidden;
+}
+.cases-links h2{
+    font-family: Catamaran;
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+    text-transform: uppercase;
     
 }
-@media only screen and (min-width:1024px){
-    .wrapper{
-        width:1000px;
-        margin: 0 auto;
-    }
-    
-    .myimage{
-        width: 48%;
-        float: left;
-        margin-top: 0px;
 
-    }
-    .info{
-        width: 50%;
-        float: right;
-    }
+.cases-links .wrapper .cases-link{
+    width: 230px;
+    height: 200px;
+    background-color: #e3e3e3;
+    float: left;
+    margin: 10px 10px 10px;
+}
+.cases-links .cases-link p{
+    font-family: Catamaran;
+    font-size: 20px;
+    color: #111;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 40%;
+}
+.cases-links .wrapper .cases-bottom{
+    width: 990px;
+    height: 150px;
+    background-color:#e3e3e3;
+    overflow: hidden;
+    margin: 20px 10px 10px;
+    text-align: center;
+}
+.cases-links .wrapper .cases-bottom h3{
+    font-family: Catamaran;
+    font-size: 20px;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 60px;
+    letter-spacing: 5px;
+    padding-top: 20px;
+}
+.cases-links .wrapper .cases-bottom p{
+    font-family: Catamaran;
+    font-size: 20px;
+    color: #111;
+    text-transform: uppercase;
+    line-height: 30px;
+}
+.bella h2{
+    font-family: Catamaran;
+    font-size: 20px;
+    color: black;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.bella iframe{
+    margin: 20px 100px ;
+    text-align: center;
+}
+.bella article h3{
+    font-family: Catamaran;
+    font-size: 18px;
+    color: black;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-bottom: 10px
+}
+.bella article p{
+    font-family: Catamaran;
+    font-size: 14px;
+    color: black;
+    column-count: 3;
+    column-gap: 20px;
+}
+
+/* ---flexbox----*/
+.container{
+    width:100%;
+    height:200px;
+    background-color: #e3e3e3;
+    display: flex;
+    flex-flow: row wrap;  
+    justify-content:center;
+    align-items: stretch;
+    align-content: space-evenly;  
+}
+.items1{
+    order: 2;
+    flex-basis: 60%;
+}
+.items2{
+    order: 1;
+    flex:0 1 100px;
+}
+/** ----gallery flex practice---*/
+.gallery-heading h2{
+    font-family: Catamaran;
+    font-size: 24px;
+    color: black;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.gallery-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.gallery-item{
+    flex-basis: 23%;
+    margin:10px;
+}
+.gallery-item img{
+    width: 250px;
+    height: 250px;
+}
+/*---form---*/
+form{
+    width: 500px;
+}
+input{
+    width: 100%;
+    margin: 5px;
+}
+textarea{
+    resize: vertical;
+    max-width: 100px;
+}
+input,textarea{
+    outline: none;
+    border: 1px solid #ddd;
+}
+input:focus,textare:focus{
+    box-shadow: 0 0 4px rgba(255,0,0,0.5);
+}
+::placeholder{
+    color: red;
+    opacity: 1;
+}
+:-ms-input-placeholder{
+    color: red;
+}
+::-ms-input-placeholder{
+    color:red;
+}
+/*----table----*/
+table{
+    width: 100%;
+    border-spacing:0;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th,td{
+    text-align: left;
+}
+tr:nth-child(even){
+    background-color: #ddd;
+}
+/*---page-not-found---*/
+.page-not-found{
+    text-align: center;
+    padding: 10px;
+}
+.page-not-found h2{
+    font-family: Catamaran;
+    font-size: 20px;
+    color: red;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 30px;
+}
+.page-not-found p{
+    font-family: Catamaran;
+    font-size: 20px;
+    color: #111;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+/*---cssvariables-pseudo-transition----*/
+.cssvariables-p-t{
+    width: 100%;
+    text-align: center;
+}
+:root{
+    --text-color:red;
+    --text-size:30px;
+}
+.cssvariables-p-t h2{
+    font-family: Catamaran;
+    font-size: var(--text-size);
+    color: var(--text-color);
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 30px; 
+}
+.cssvariables-p-t  a:hover{
+    color:var(--text-color);
+}
+.cssvariables-p-t li:last-child{
+    color:var(--text-color);
+}
+.cssvariables-p-t li:nth-child(2n+1){
+    color:green;
+}
+.cssvariables-p-t p::first-line{
+    color:orange;
+}
+.cssvariables-p-t p::first-letter{
+    color:red;
+}
+.cssvariables-p-t p::selection{
+    color:yellow;
+}
+.cssvariables-p-t p::before{
+    content: "This is a paragraph"
+}
+.cssvariables-p-t ul::before{
+    content: url(images/about-me.jpg)
+}
+/*---transition---*/
+.transition div{
+    width:200px;
+    height: 200px;
+    background-color:red;
+    transition: width 2s ease-in-out 4s;
+}
+.transition div:hover{
+    width:500px;
+}
+/*---grid--*/
+.grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 500px 500px 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". title title ."
+    ". header header ."
+    ". content screen ."
+    ". footer footer ."
+}
+.title{
+    grid-area: title;
+}
+.header{
+    grid-area: header;
+}
+.content{
+    grid-area: content;
+    align-self:center;
+}
+.screen{
+    grid-area: screen;
+}
+.footer{
+    grid-area: footer;
+}
+.grid div:nth-child(even){
+    background-color:red;
+}
+.grid div:nth-child(odd){
+    background-color:blue
+}
+@media only screen and (max-width:468px){
+    .grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns:1fr 80% 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    ". title ."
+    ". header ."
+    ". content ."
+    ". screen ."
+    ". footer ."
+}    
+}
+/*---dropdown menu ---*/
+.drop-nav{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+}
+.drop-nav p{
+    font-family: Catamaran;
+    font-size: 24px;
+    color: #111;
+    font-weight: 900;
+    text-transform: uppercase;
+    float: left;
+    padding: 12px 16px;
+}
+.drop-nav ul{
+    float: left;   
+}
+.drop-nav ul li{
+    float: left;
+    list-style: none;
+    position: relative;
+}
+.drop-nav ul li a{
+    display: block;
+    text-decoration: none;
+    font-family: Catamaran;
+    font-size: 16px;
+    color: #111;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 17px 16px;
+}
+
+.drop-nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 10px;
+    border-radius: 0px 0px 4px 4px;
+}
+.drop-nav ul li:hover ul {
+    display: block;
+}
+.drop-nav ul li ul li {
+    width: 100%;
+}
+.drop-nav ul li ul li a{
+    padding: 8px 14px;
+}
+.drop-nav ul li ul li a:hover{
+    background-color: #f3f3f3;
 }
